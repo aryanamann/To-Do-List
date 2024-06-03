@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO-List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <div class="wrapper">
+    <header>
+      <nav id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#">Tasks</a>
+        <div id="navTasks"></div>
+      </nav>
+      <div class="left-header">
+        <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+          >&#9776;</span
+        >
+        <h2 class="fw-semibold">TO-DO-List</h2>
+      </div>
+      <div class="right-header">
+        <button>Home</button>
+        <button>About</button>
+      </div>
+    </header>
+    <!-- Modal -->
+    <form
+      class="modal fade"
+      id="form"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Add New Task
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-2 fw-semibold">Title</p>
+            <input
+              class="form-control mb-2"
+              type="text"
+              name=""
+              id="textinput"
+            />
+            <div id="msg"></div>
+            <p class="mb-2 fw-semibold">Description</p>
+            <textarea class="form-control" name="" id="textarea"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="add" type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <section>
+      <div class="center-box">
+        <h2>Things To Do:</h2>
+        <button data-bs-toggle="modal" data-bs-target="#form">New Task</button>
+      </div>
+      <div id="tasks"></div>
+    </section>
+    <footer>
+      <div class="footer-bottom">
+        <p>&copy; 2024 To-Do-List. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="main.js"></script>
+</html>

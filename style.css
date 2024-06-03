@@ -1,0 +1,213 @@
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url(neobruthalism.svg);
+  margin: 0;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#navTasks div {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: whitesmoke;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#navTasks div p {
+  margin: 0;
+}
+
+#navTasks div p:hover {
+  color: #818181;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left-header h2 {
+  margin: 2px 0;
+}
+.left-header :hover {
+  transition: 0.5s;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.right-header button {
+  background: #f7cb66;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0.5px solid;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.right-header button:hover {
+  transition: 0.5s;
+  background-color: #111;
+  color: white;
+  border: none;
+}
+
+.right-header {
+  margin-right: 40px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+}
+#center {
+  transition: margin-left 0.5s;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+section {
+  min-height: 350px;
+  width: 90%;
+  max-width: 860px;
+  padding: 16px;
+  margin: 0.75em auto;
+  border-radius: 10px;
+  background-color: #60c0bf;
+  overflow-x: scroll;
+  border: 1px solid;
+}
+section::-webkit-scrollbar {
+  width: 0 !important;
+}
+.center-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center-box h2 {
+  margin: 0;
+  font-size: 44px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.center-box button {
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: fit-content;
+  font-weight: 900;
+  background-color: #7fbc95;
+  border: 1px solid;
+  padding: 8px 40px 8px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.center-box button:hover {
+  transition: 0.5s;
+  background-color: black;
+  color: whitesmoke;
+}
+#tasks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+#tasks div {
+  background: #88d0cf;
+  max-width: 200px;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 5px;
+  display: grid;
+  font-weight: 600;
+}
+
+#tasks div span {
+  display: flex;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+#tasks div p {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+#msg {
+  color: red;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
