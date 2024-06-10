@@ -132,4 +132,5 @@ let flagTask = (e) => {
 let navupate = (e) => {
   alert("Updated Succesfully..");
   modal.style.display = "none";
+  closeNav();
 };
