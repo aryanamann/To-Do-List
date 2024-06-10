@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <div class="wrapper">
+  <div id="main" class="wrapper">
     <header>
       <nav id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
@@ -29,7 +29,10 @@
         <div id="navTasks"></div>
       </nav>
       <div class="left-header">
-        <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        <span
+          id="hamburger"
+          style="font-size: 30px; cursor: pointer"
+          onclick="openNav()"
           >&#9776;</span
         >
         <h2 class="fw-semibold">TO-DO-List</h2>
@@ -39,62 +42,69 @@
         <button>About</button>
       </div>
     </header>
-    <!-- Modal -->
-    <form
-      class="modal fade"
-      id="form"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Add New Task
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p class="mb-2 fw-semibold">Title</p>
+    <section>
+      <form id="form">
+        <div class="center-box">
+          <h3>Add New Tasks Below:</h3>
+          <button id="add" type="submit">Add New Task</button>
+        </div>
+        <div class="taskdetails row m-0">
+          <div class="col-4 p-0">
+            <p class="mb-2 fw-semibold p-0">Title:</p>
             <input
-              class="form-control mb-2"
+              class="form-control mb-1"
               type="text"
               name=""
               id="textinput"
             />
             <div id="msg"></div>
-            <p class="mb-2 fw-semibold">Description</p>
-            <textarea class="form-control" name="" id="textarea"></textarea>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button id="add" type="submit" class="btn btn-primary">Add</button>
+          <div class="col-4">
+            <p class="mb-2 fw-semibold p-0">Description:</p>
+            <input class="form-control mb-1" name="" id="textarea" />
+          </div>
+          <div class="col-4">
+            <p class="mb-2 fw-semibold p-0">Date:</p>
+            <input type="date" class="w-100 form-control" id="date" />
           </div>
         </div>
-      </div>
-    </form>
-    <section>
-      <div class="center-box">
-        <h2>Things To Do:</h2>
-        <button data-bs-toggle="modal" data-bs-target="#form">New Task</button>
-      </div>
-      <div id="tasks"></div>
+        <!-- modal description -->
+        <div id="myModal" class="my-modal">
+          <div class="content">
+            <div id="details">
+              <span class="close">&times;</span>
+              <h6>Add Details of the Task Here:</h6>
+              <input
+                class="form-control mb-1"
+                type="text"
+                placeholder="Type Here..."
+                name=""
+                id="detailInput"
+              />
+              <input
+                class="form-control mb-3"
+                placeholder="Enter the Description..."
+                name=""
+                id="textarea"
+              />
+              <input
+                type="file"
+                class="form-control mb-3"
+                id="img"
+                accept="image/*"
+              />
+              <a id="navupdate" onclick="navupate(this)" class="navupdate">
+                Add
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="newtask" id="tasks"></div>
     </section>
     <footer>
       <div class="footer-bottom">
-        <p>&copy; 2024 To-Do-List. All rights reserved.</p>
+        <p>&copy; 2024 Aryan Aman Productions Ltd. All rights reserved.</p>
       </div>
     </footer>
   </div>
